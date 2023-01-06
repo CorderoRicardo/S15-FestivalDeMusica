@@ -1,25 +1,28 @@
 {
-  "name": "s15-festivaldemusica",
-  "version": "1.0.0",
-  "description": "Proyecto web con SASS, Gulp y HTML",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CorderoRicardo/S15-FestivalDeMusica.git"
-  },
-  "keywords": [
-    "JavaScript",
-    "SASS",
-    "Gulp",
-    "HTML"
-  ],
-  "author": "Ricardo Cordero",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CorderoRicardo/S15-FestivalDeMusica/issues"
-  },
-  "homepage": "https://github.com/CorderoRicardo/S15-FestivalDeMusica#readme"
+    "name": "s15-festivaldemusica",
+    "version": "1.0.0",
+    "description": "Proyecto web con SASS, Gulp y HTML",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CorderoRicardo/S15-FestivalDeMusica.git"
+    },
+    "keywords": [
+        "JavaScript",
+        "SASS",
+        "Gulp",
+        "HTML"
+    ],
+    "author": "Ricardo Cordero",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/CorderoRicardo/S15-FestivalDeMusica/issues"
+    },
+    "homepage": "https://github.com/CorderoRicardo/S15-FestivalDeMusica#readme",
+    "devDependencies": {
+        "sass": "^1.57.1"
+    }
 }
