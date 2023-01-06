@@ -13,13 +13,13 @@ function css(done) {
     //Identify the SASS file
     //Compile it
     //Save it to the disk
-    src('src/scss/app.scss').pipe(sass()).pipe(dest('build/css'));
+    src('src/scss/**/*.scss').pipe(sass()).pipe(dest('build/css'));
 
     done(); // callback
 }
 
 function dev(done) {
-    watch('src/scss/app.scss', css);
+    watch('src/scss/**/*.scss', css);
     done();
 }
 
