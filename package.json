@@ -6,7 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "sass": "sass --watch src/scss:build/css",
-        "tarea": "gulp tarea"
+        "tarea": "gulp tarea",
+        "css": "gulp css"
     },
     "repository": {
         "type": "git",
@@ -26,6 +27,7 @@
     "homepage": "https://github.com/CorderoRicardo/S15-FestivalDeMusica#readme",
     "devDependencies": {
         "gulp": "^4.0.2",
+        "gulp-sass": "^5.1.0",
         "sass": "^1.57.1"
     }
 }
