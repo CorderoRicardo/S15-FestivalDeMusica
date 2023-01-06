@@ -1,5 +1,4 @@
-@import 'base/variables'; //legacy form of import a file
-@import 'contenido/contenido';
-body {
-    background-color: $rojo;
-}
+// @import 'base/variables'; //legacy form of import a file
+// @import 'contenido/contenido';
+
+@use 'base';
