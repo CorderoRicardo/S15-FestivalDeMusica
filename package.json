@@ -24,6 +24,7 @@
     },
     "homepage": "https://github.com/CorderoRicardo/S15-FestivalDeMusica#readme",
     "devDependencies": {
+        "gulp": "^4.0.2",
         "sass": "^1.57.1"
     }
 }
