@@ -12,6 +12,9 @@ const { src, dest, watch, parallel } = require('gulp');
 // CSS dependencies
 const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
 
 //Image dependencies
 const imagemin = require('gulp-imagemin');
@@ -26,6 +29,7 @@ function css(done) {
     src('src/scss/**/*.scss')
         .pipe(plumber())
         .pipe(sass())
+        .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(dest('build/css'));
 
     done(); // callback
