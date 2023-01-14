@@ -23,6 +23,9 @@ const cache = require('gulp-cache');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
+// JS dependencies
+const terser = require('gulp-terser-js');
+
 function css(done) {
     //Identify the SASS file
     //Compile it
@@ -60,7 +63,11 @@ function imagenes(done) {
 }
 
 function javascript(done) {
-    src('src/js/**/*.js').pipe(dest('build/js'));
+    src('src/js/**/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(terser())
+        .pipe(sourcemaps.write('.'))
+        .pipe(dest('build/js'));
     done();
 }
 
