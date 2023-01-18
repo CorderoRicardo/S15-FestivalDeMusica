@@ -3,7 +3,7 @@
 
 .header {
     background-color: v.$verde;
-
+    z-index: 20;
     @include m.tablet {
         &.fijo {
             left: 0;
@@ -26,6 +26,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+    }
+}
+.contenido-header {
+    h1 {
+        a:visited {
+            color: v.$blanco;
         }
     }
 }

@@ -6,14 +6,15 @@ function iniciarApp() {
     fixNav();
     crearGaleria();
     scrollNav();
+    topNav();
 }
 
 function fixNav() {
     const barra = document.querySelector('.header');
-    const sobreFestival = document.querySelector('.sobre-festival');
+    const video = document.querySelector('.video');
     const body = document.querySelector('body');
     window.addEventListener('scroll', function () {
-        if (sobreFestival.getBoundingClientRect().top < 0) {
+        if (video.getBoundingClientRect().top < 10) {
             barra.classList.add('fijo');
             body.classList.add('body-scroll');
         } else {
@@ -33,6 +34,15 @@ function scrollNav() {
             const section = document.querySelector(sectionScroll);
             section.scrollIntoView({ behavior: 'smooth' });
         });
+    });
+}
+
+function topNav() {
+    const enlace = document.querySelector('.contenido-header h1 a');
+    enlace.addEventListener('click', function (e) {
+        e.preventDefault();
+        const section = document.querySelector(e.target.attributes.href.value);
+        section.scrollIntoView({ behavior: 'smooth' });
     });
 }
 
