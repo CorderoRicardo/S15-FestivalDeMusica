@@ -63,7 +63,7 @@ function crearGaleria() {
 }
 
 function mostrarImagen(id) {
-    const imagen = document.createElement('picture');
+    let imagen = document.createElement('picture');
     imagen.innerHTML = `
                     <source srcset="build/img/grande/${id}.avif" type="image/avif">
                     <source srcset="build/img/grande/${id}.webp" type="image/webp">
@@ -74,11 +74,11 @@ function mostrarImagen(id) {
     const overlay = document.createElement('DIV');
     overlay.appendChild(imagen);
     overlay.classList.add('overlay');
-    overlay.onclick = function () {
-        const body = document.querySelector('body');
-        body.classList.remove('fijar-body');
-        overlay.remove();
-    };
+    // overlay.onclick = function () {
+    //     const body = document.querySelector('body');
+    //     body.classList.remove('fijar-body');
+    //     overlay.remove();
+    // };
 
     //Close the modal
     const closeModal = document.createElement('P');
@@ -95,6 +95,15 @@ function mostrarImagen(id) {
     const nextImage = document.createElement('P');
     nextImage.textContent = '>';
     nextImage.classList.add('btn-siguiente');
+    nextImage.onclick = function () {
+        let img;
+        if (id < 12) {
+            imagen.remove();
+            id = id + 1;
+            imagen = setupImage(id);
+            overlay.appendChild(imagen);
+        }
+    };
 
     overlay.appendChild(nextImage);
 
@@ -109,4 +118,14 @@ function mostrarImagen(id) {
     const body = document.querySelector('body');
     body.appendChild(overlay);
     body.classList.add('fijar-body');
+}
+
+function setupImage(id) {
+    const imagen = document.createElement('picture');
+    imagen.innerHTML = `
+                <source srcset="build/img/grande/${id}.avif" type="image/avif">
+                <source srcset="build/img/grande/${id}.webp" type="image/webp">
+                <img loading="lazy" width="200" height="300" src="build/img/grande/${id}.jpg" alt="imagen galería"/>
+            `;
+    return imagen;
 }
