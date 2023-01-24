@@ -91,6 +91,20 @@ function mostrarImagen(id) {
     };
     overlay.appendChild(closeModal);
 
+    //Next image
+    const nextImage = document.createElement('P');
+    nextImage.textContent = '>';
+    nextImage.classList.add('btn-siguiente');
+
+    overlay.appendChild(nextImage);
+
+    //Previous image
+    const previousImage = document.createElement('P');
+    previousImage.textContent = '<';
+    previousImage.classList.add('btn-anterior');
+
+    overlay.appendChild(previousImage);
+
     // Add the overlay in the HTML document
     const body = document.querySelector('body');
     body.appendChild(overlay);
