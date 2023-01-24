@@ -111,6 +111,14 @@ function mostrarImagen(id) {
     const previousImage = document.createElement('P');
     previousImage.textContent = '<';
     previousImage.classList.add('btn-anterior');
+    previousImage.onclick = function () {
+        if (id > 1) {
+            imagen.remove();
+            id = id - 1;
+            imagen = setupImage(id);
+            overlay.appendChild(imagen);
+        }
+    };
 
     overlay.appendChild(previousImage);
 
