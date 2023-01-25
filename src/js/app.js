@@ -96,10 +96,14 @@ function mostrarImagen(id) {
     nextImage.textContent = '>';
     nextImage.classList.add('btn-siguiente');
     nextImage.onclick = function () {
-        let img;
         if (id < 12) {
             imagen.remove();
             id = id + 1;
+            imagen = setupImage(id);
+            overlay.appendChild(imagen);
+        } else {
+            imagen.remove();
+            id = 1;
             imagen = setupImage(id);
             overlay.appendChild(imagen);
         }
@@ -115,6 +119,11 @@ function mostrarImagen(id) {
         if (id > 1) {
             imagen.remove();
             id = id - 1;
+            imagen = setupImage(id);
+            overlay.appendChild(imagen);
+        } else {
+            imagen.remove();
+            id = 12;
             imagen = setupImage(id);
             overlay.appendChild(imagen);
         }
