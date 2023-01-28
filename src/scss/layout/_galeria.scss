@@ -24,6 +24,12 @@
     }
 }
 
+.small-img {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .overlay {
     position: fixed;
     z-index: 30;
