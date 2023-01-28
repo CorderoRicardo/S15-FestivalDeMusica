@@ -81,7 +81,7 @@ function mostrarImagen(id) {
     // };
 
     //Close the modal
-    const closeModal = document.createElement('P');
+    const closeModal = document.createElement('BUTTON');
     closeModal.textContent = 'X';
     closeModal.classList.add('btn-cerrar');
     closeModal.onclick = function () {
@@ -92,7 +92,7 @@ function mostrarImagen(id) {
     overlay.appendChild(closeModal);
 
     //Next image
-    const nextImage = document.createElement('P');
+    const nextImage = document.createElement('BUTTON');
     nextImage.textContent = '>';
     nextImage.classList.add('btn-siguiente');
     nextImage.onclick = function () {
@@ -112,7 +112,7 @@ function mostrarImagen(id) {
     overlay.appendChild(nextImage);
 
     //Previous image
-    const previousImage = document.createElement('P');
+    const previousImage = document.createElement('BUTTON');
     previousImage.textContent = '<';
     previousImage.classList.add('btn-anterior');
     previousImage.onclick = function () {
