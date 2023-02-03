@@ -92,6 +92,15 @@ function mostrarImagen(id) {
     };
     overlay.appendChild(closeModal);
 
+    const invisibleDiv = document.createElement('DIV');
+    invisibleDiv.classList.add('close-modal');
+    invisibleDiv.onclick = function () {
+        const body = document.querySelector('body');
+        body.classList.remove('fijar-body');
+        overlay.remove();
+    };
+    overlay.appendChild(invisibleDiv);
+
     //Next image
     const nextImage = document.createElement('BUTTON');
     nextImage.textContent = '>';
