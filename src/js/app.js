@@ -75,23 +75,8 @@ function mostrarImagen(id) {
     const overlay = document.createElement('DIV');
     overlay.appendChild(imagen);
     overlay.classList.add('overlay-modal');
-    // overlay.onclick = function () {
-    //     const body = document.querySelector('body');
-    //     body.classList.remove('fijar-body');
-    //     overlay.remove();
-    // };
 
     //Close the modal
-    const closeModal = document.createElement('BUTTON');
-    closeModal.textContent = 'X';
-    closeModal.classList.add('btn-cerrar');
-    closeModal.onclick = function () {
-        const body = document.querySelector('body');
-        body.classList.remove('fijar-body');
-        overlay.remove();
-    };
-    overlay.appendChild(closeModal);
-
     const invisibleDiv = document.createElement('DIV');
     invisibleDiv.classList.add('close-modal');
     invisibleDiv.onclick = function () {
