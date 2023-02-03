@@ -69,30 +69,6 @@
     }
 }
 
-.btn-cerrar {
-    z-index: 35;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    border-style: none;
-    background-color: v.$blanco;
-    color: v.$negro;
-    display: grid;
-    place-items: center;
-    font-weight: 700;
-    grid-column-start: 7;
-    grid-column-end: 8;
-    grid-row-start: 6;
-    &:hover {
-        cursor: pointer;
-        background-color: v.$amarillo;
-    }
-    &:active {
-        margin-top: 2px;
-        background-color: darken(v.$amarillo, 25);
-    }
-}
-
 .btn-siguiente {
     position: relative;
     z-index: 35;
